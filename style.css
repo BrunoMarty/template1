@@ -1,0 +1,175 @@
+body {
+	background-color: black;
+}
+
+main {
+	display: flex;
+	overflow: hidden;
+	flex-wrap: wrap;
+	padding: 2em;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+
+
+
+section {
+	height: 20em;
+	flex-basis: 30%;
+	overflow: hidden;
+	margin-top: 1em;
+	margin-left:1em;
+	position: relative;
+	background-color: gray;
+	box-sizing: border-box;
+}
+
+section img {
+
+	width:30%;
+	height:30%;
+}
+
+#vignette {
+
+	display: flex;
+	flex-flow: row wrap;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#vignette img {
+    width: 4em;
+    margin: 0.35em;
+    /*height: 50px;*/
+}
+
+.opac p {
+	display: block;
+	position: absolute;
+	height: 100%;
+	line-height: 10em;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	color: white;
+	text-align: center;
+	font-size: 35px;
+	text-decoration: none;
+	opacity: 0;
+	top: 0;
+	transition: ease 0.7s;
+	margin:0;
+}
+
+.opac p:hover {
+	opacity: 1;
+}
+
+.opac img {
+	min-height: 100%;
+	min-width: 100%;
+}
+
+header {
+	text-align: center;
+}
+
+#vignette:hover img:nth-child(1),
+#vignette:hover img:nth-child(3),
+#vignette:hover img:nth-child(6),
+#vignette:hover img:nth-child(8) {
+ filter:opacity(0.2);
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #696969;
+}
+
+
+
+
+
+header li a:hover {
+    background-color: gray;
+
+}
+
+header {
+
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+
+
+.dropdown {
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+		text-align:center;
+		padding-left:15%;
+
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right: 4em;
+
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#texte {
+	display:flex;
+	flex-flow: column	;
+}
+
+#texte p {
+	flex-basis: 100%;
+}
+
+#texte:hover p:last-child{
+	order:-1;
+}
+
+#texte p:last-child {
+	background-color:yellow;
+}
